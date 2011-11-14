@@ -16,4 +16,6 @@
     <plugin name="Temperature" value="com.phonegap.TempListener"/>
     <plugin name="FileTransfer" value="com.phonegap.FileTransfer"/>
     <plugin name="Capture" value="com.phonegap.Capture"/>
+	<plugin name="FacebookAuth" value="com.hipsnip.plugins.facebook.FacebookAuth"/>
+
 </plugins>
