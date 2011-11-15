@@ -10,6 +10,7 @@ function logout() {
 }
             
 function login() {
+	alert("login");
     window.plugins.facebook.authorize(appId, function(res) {
 	    if(res.token !== undefined) {
 	        window.plugins.facebook.request("me" ,function(res){

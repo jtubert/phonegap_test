@@ -11,7 +11,8 @@
      * @param callback      called when logged in
      */
     Facebook.prototype.authorize = function(app_id, callback) {
-        PhoneGap.exec(callback, null, "FacebookAuth", "authorize", [app_id]);
+        alert("authorize");
+		PhoneGap.exec(callback, null, "FacebookAuth", "authorize", [app_id]);
     };
 
     Facebook.prototype.reauthorize = function(app_id, callback) {
