@@ -4,17 +4,40 @@
     <meta name="viewport" content="width=320; user-scalable=no" />
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <title>PhoneGap</title>
-	  <link rel="stylesheet" href="master.css" type="text/css" media="screen" title="no title" charset="utf-8">
-	  <script type="text/javascript" charset="utf-8" src="phonegap-1.0.0.js"></script>
-	<script type="text/javascript" charset="utf-8" src="facebook.js"></script> 
-	  <script type="text/javascript" charset="utf-8" src="main.js"></script>  
+	<link rel="stylesheet" href="master.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<script type="text/javascript" charset="utf-8" src="phonegap-1.0.0.js"></script>
+	<script type="text/javascript" charset="utf-8" src="facebook.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0rc3/jquery.mobile-1.0rc3.min.css" />
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0rc3/jquery.mobile-1.0rc3.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="main.js"></script>  
 
   </head>
-  <body>
-    <h1>Facebook test WTF 2</h1>
+  <body onload="init();" id="stage" class="theme">
     
-	<button onclick="login()">Login</button>
-	<button onclick="logout()">Logout</button>
+	<div data-role="header" data-position="inline">
+		<a id="login" href="#" onclick="authorize()" data-icon="check">Login</a>
+		<h1>Facebook test</h1>
+		<a id="logout" href="#" onclick="logout()" data-icon="delete" data-theme="b">Logout</a>
+	</div>
+	
+	
+	<ul id="friendlist" data-role="listview" data-theme="a">
+		
+	</ul>
+	
+	
+	<div data-role="footer" data-position="fixed">		
+		<div data-role="navbar" data-iconpos="bottom">
+			<ul>
+				<li><a href="#" data-icon="grid" data-theme="a">Summary</a></li>
+				<li><a href="#">Two</a></li>
+				<li><a href="#">Three</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /footer -->
+	
+	
 
 
   </body>
