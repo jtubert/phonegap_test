@@ -16,15 +16,18 @@
   <body onload="init();" id="stage" class="theme">
     
 	<div data-role="header" data-position="inline">
-		<a id="login" href="#" onclick="authorize()" data-icon="check">Login</a>
+		<a id="login" href="#" onclick="authorize()" data-icon="check">Login</a>		
 		<h1>Facebook test</h1>
 		<a id="logout" href="#" onclick="logout()" data-icon="delete" data-theme="b">Logout</a>
 	</div>
 	
+	<a id="pict" href="#" onclick="show_pic()" data-icon="check">showPict</a>
 	
 	<ul id="friendlist" data-role="listview" data-theme="a">
 		
 	</ul>
+	
+	<div id="test_img"></div>
 	
 	
 	<div data-role="footer" data-position="fixed">		
