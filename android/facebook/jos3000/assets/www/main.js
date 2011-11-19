@@ -46,25 +46,7 @@ function onLogin(res){
 	$("#logout").show();
 }
 
-function dump_pic(data) {
-    var viewport = document.getElementById('viewport');
-    console.log(data);
-    viewport.style.display = "";
-    viewport.style.position = "absolute";
-    viewport.style.top = "10px";
-    viewport.style.left = "10px";
-    document.getElementById("test_img").src = "data:image/jpeg;base64," + data;
-}
 
-function fail(msg) {
-    alert(msg);
-}
-
-function show_pic() {
-    navigator.camera.getPicture(dump_pic, fail, {
-        quality : 50
-    });
-}
 
 function onLogout(res){
 	alert(res);
@@ -87,21 +69,56 @@ function addFriends(){
 		$('#friendlist').listview('refresh'); 
     });
 
-
-	
-	
-	//$("#friendlist")
-	/*
-	
-	<li><a href="acura.html">Acura</a></li>
-	<li><a href="audi.html">Audi</a></li>
-	<li><a href="bmw.html">BMW</a></li>
-	<li><a href="acura.html">Acura</a></li>
-	<li><a href="audi.html">Audi</a></li>
-	<li><a href="bmw.html">BMW</a></li>
-	<li><a href="acura.html">Acura</a></li>
-	<li><a href="audi.html">Audi</a></li>
-	<li><a href="bmw.html">BMW</a></li>
-	<li><a href="acura.html">Acura</a></li>
-	*/
 }
+
+
+//---------------------------------------------------------
+//---------------------------------------------------------
+//---------------------------------------------------------
+//---------------------------------------------------------
+//---------------------------------------------------------
+//---------------------------------------------------------
+
+function fail(msg) {
+    alert(msg);
+}
+
+function dump_pic(data) {
+    var viewport = document.getElementById('viewport');
+    console.log(data);
+    viewport.style.display = "";
+    viewport.style.position = "absolute";
+    viewport.style.top = "60px";
+    viewport.style.left = "100px";
+    document.getElementById("test_img").src = "data:image/jpeg;base64," + data;
+}
+
+function show_pic() {
+    navigator.camera.getPicture(dump_pic, fail, {
+        quality : 50
+    });
+}
+
+//---------------------------------------------------------
+
+function contacts_success(contacts) {
+    alert("contacts_success");// + ' contacts returned. ' +contacts[0].name);
+
+	//alert(contacts.length + ' contacts returned.' + (contacts[2] && contacts[2].name ? (' Third contact is ' + contacts[2].name.formatted): ''));
+}
+
+function get_contacts() {
+	alert("get_contacts");  
+
+	var obj = new ContactFindOptions();
+	    obj.filter = "";
+	    obj.multiple = false;
+	    obj.limit = 1;
+	    navigator.service.contacts.find([ "displayName", "name" ], contacts_success,fail, obj);
+}
+
+//---------------------------------------------------------
+//---------------------------------------------------------
+//---------------------------------------------------------
+//---------------------------------------------------------
+//---------------------------------------------------------

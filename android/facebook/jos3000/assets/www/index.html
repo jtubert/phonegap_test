@@ -21,14 +21,18 @@
 		<a id="logout" href="#" onclick="logout()" data-icon="delete" data-theme="b">Logout</a>
 	</div>
 	
-	<a id="pict" href="#" onclick="show_pic()" data-icon="check">showPict</a>
+	<a href="#" onclick="show_pic()" data-icon="check">showPict</a><br><br>
+	<a href="#" onclick="get_contacts()" data-icon="check">get contacts</a><br><br>
+	
+	<div id="viewport" class="viewport" style="display: none;">       
+      <img style="width:100px;height:100px" id="test_img" src="" />
+    </div>
+	
+	
 	
 	<ul id="friendlist" data-role="listview" data-theme="a">
 		
-	</ul>
-	
-	<div id="test_img"></div>
-	
+	</ul>	
 	
 	<div data-role="footer" data-position="fixed">		
 		<div data-role="navbar" data-iconpos="bottom">
